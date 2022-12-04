@@ -5,8 +5,6 @@
 using namespace std;
 
 class BloodGroup {
-    protected:
-        int id;
     private:
         string bloodType;
     public:

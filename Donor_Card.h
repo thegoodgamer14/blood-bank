@@ -5,31 +5,25 @@
 #include<string>
 #include<ctime>
 #include "Blood_Group.h"
+#include "Contact.h"
 using namespace std;
 
-class Donorcard: public BloodGroup {
+class Donorcard: public BloodGroup, public Contact {
 private:
     string donorID;
     string ownerName;
     string donationDate;
-    string AadharNo;
 public:
     void setOwnerName(string oName);
     void setDonationDate(string d);
-    void setAadhar(string adhr);
     void setDonorID();
     string getOwnerName();
     string getDonationDate();
-    string getAadhar();
     string getDonorID();
 };
 
 void Donorcard::setOwnerName(string oName) {
     ownerName=oName;
-}
-
-void Donorcard::setAadhar(string adhr) {
-    AadharNo=adhr;
 }
 
 void Donorcard::setDonationDate(string d) {
@@ -53,10 +47,6 @@ string Donorcard::getDonationDate() {
 
 string Donorcard::getOwnerName() {
     return ownerName;
-}
-
-string Donorcard::getAadhar() {
-    return AadharNo;
 }
 
 string Donorcard::getDonorID() {
